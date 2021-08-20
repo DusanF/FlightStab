@@ -123,7 +123,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {	//GPIO interrupt - new data fro
 		mpu_ready = 1;
 }
 
-void USART3_IRQHandler(void){	Usart IRQ, RC RX
+void USART3_IRQHandler(void){	//Usart IRQ, RC RX
     if (((USART3->ISR & USART_ISR_ORE) != 0U) && (((USART3->CR1 & USART_CR1_RXNEIE) != 0U)))
     	USART3->ICR = UART_CLEAR_OREF;
 
